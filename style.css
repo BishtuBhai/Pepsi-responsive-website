@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    padding: 100px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0062be;
+    transition: 0.5s;
+}
+
+header{
+    position:absolute;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 100px;
+    align-items: center;
+}
+
+header .logo{
+    position: relative;
+    max-width: 80px;
+}
+
+header ul{
+    display: flex;
+   position: relative;
+}
+ 
+header ul li{
+    list-style: none;
+    
+}
+
+header ul li a{
+    padding: 20px;
+    color: aliceblue;
+    font-weight: 400;
+    display:inline-block ;
+    margin-left: 50px;
+    text-decoration: none;
+    margin-top: -39px;
+}
+
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .textbox h2{
+    color: aliceblue;
+    font-size: 4em;
+    line-height: 1.5em;
+    width: 900;
+    text-transform: uppercase;
+}
+
+.content .textbox h2 span{
+    font-size: 2em;
+}
+
+.content .textbox p{
+    color: aliceblue;
+}
+
+.content .textbox a{
+    color: black;
+    background-color: aliceblue;
+    text-decoration: none;
+    border-radius: 40px;
+    padding: 10px;
+    margin-top: 40px;
+    display: inline-block;
+    font-weight: 300;
+    text-transform:uppercase ;
+}
+
+.thum{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.thum li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.thum li:hover{
+    transform: translateY(-15px);
+}
+
+.thum li img{
+    max-width: 40px;
+}
+
+.icon{
+    top: 50%;
+    right: 1%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon li{
+    list-style: none;
+}
+
+.icon li a{
+    display: inline-block;
+    transform: scale(0.6);
+}
+
+@media (max-width: 991px) {
+    section{
+           padding: 40px;
+           padding-bottom: 150px;
+      }
+
+      header{
+        padding: 20px 40px;
+      }
+
+      header .logo{
+        position: relative;
+        max-width: 60px;
+      }
+
+      header ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: aliceblue;
+        z-index: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s;
+        visibility: hidden;
+      }
+
+      header ul.active{
+        visibility: visible;
+      }
+
+      header ul li a {
+        padding: 20px;
+        color: #b200d7;
+        font-weight: 400;
+        display: inline-block;
+        margin-left: 50px;
+        text-decoration: none;
+        margin-top: -22px;
+        font-size: 36px;
+        margin: -5px;
+      }  
+      
+      
+      header ul li a:hover{
+        color: black;
+      }
+
+
+      .menu{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(./img/menu.png);
+        background-position: center;
+        background-size: 36px;
+        z-index: 2;
+        cursor: pointer;
+      }
+     
+      .menu.active{
+        background: url(./img/close.png);
+        background-position: center;
+        background-size: 36px;
+        z-index: 2;
+        cursor: pointer;
+        filter: invert(1);
+      }
+
+      .content 
+      {
+        margin-top: 104px;
+        flex-direction: column;
+      }
+
+      .content .textbox{
+        position: relative;
+        max-width: 100%; 
+        padding-right: 20px;
+      }
+
+      .content .textbox h2{
+        font-size: 3em;
+      }
+
+      .textbox a{
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+
+      .content .imgbox{
+        width: 100%;
+        display: flex;
+        padding-right: 0%;
+        margin-top: 50px;
+        justify-content: center;
+      }
+}
